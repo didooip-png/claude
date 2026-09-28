@@ -22,7 +22,8 @@ function sq($v): string
 $out = [];
 $out[] = '-- =====================================================================';
 $out[] = '--  Quiz SES — Données de démonstration (OPTIONNEL)';
-$out[] = '--  À importer APRÈS schema.sql si tu veux des quiz d’exemple.';
+$out[] = '--  À importer APRÈS schema.sql. Tous les quiz arrivent en BROUILLON :';
+$out[] = '--  la professeure les ouvre elle-même (avec un code d’accès) le jour J.';
 $out[] = '--  Fichier généré par tools/generate_demo_sql.php';
 $out[] = '-- =====================================================================';
 $out[] = '';
@@ -41,7 +42,7 @@ foreach ($src['quizzes'] as $quiz) {
         . ' require_fullscreen, max_exits, exit_action, created_at, updated_at) VALUES ('
         . implode(', ', [
             sq($quiz['title']), sq($quiz['description']), sq($quiz['level']), sq($quiz['chapter']),
-            sq($quiz['status']), sq($quiz['access_code']), 1, 0, 1, 1, 0,
+            sq('draft'), sq($quiz['access_code']), 1, 0, 1, 1, 0,
             sq($quiz['feedback_mode']), 0, (int) $quiz['show_leaderboard'], 1, 1,
             (int) $quiz['max_exits'], sq($quiz['exit_action']),
         ])

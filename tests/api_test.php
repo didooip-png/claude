@@ -118,6 +118,8 @@ foreach ($r['data']['quizzes'] as $qz) {
 check($quizId !== null, 'quiz « La croissance économique » présent');
 $r = $t->post('t_quizzes', [], false);
 check($r['_http'] === 419, 'requête sans jeton CSRF refusée', $r);
+$r = $t->post('t_quiz_status', ['quiz_id' => $quizId, 'status' => 'open']);
+check($r['ok'], 'la prof ouvre le quiz (tous les quiz arrivent en brouillon)', $r);
 
 echo "== Inscription élève + validation\n";
 $s = new Client($base);

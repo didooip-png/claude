@@ -1,6 +1,7 @@
 -- =====================================================================
 --  Quiz SES — Données de démonstration (OPTIONNEL)
---  À importer APRÈS schema.sql si tu veux des quiz d’exemple.
+--  À importer APRÈS schema.sql. Tous les quiz arrivent en BROUILLON :
+--  la professeure les ouvre elle-même (avec un code d’accès) le jour J.
 --  Fichier généré par tools/generate_demo_sql.php
 -- =====================================================================
 
@@ -11,7 +12,7 @@ INSERT IGNORE INTO classes (name, created_at) VALUES ('1ère SES 1', UNIX_TIMEST
 INSERT IGNORE INTO classes (name, created_at) VALUES ('Tle SES 2', UNIX_TIMESTAMP());
 
 -- Quiz : La croissance économique
-INSERT INTO quizzes (title, description, level, chapter, status, access_code, max_attempts, time_limit, shuffle_questions, shuffle_choices, pool_size, feedback_mode, results_released, show_leaderboard, speed_bonus, require_fullscreen, max_exits, exit_action, created_at, updated_at) VALUES ('La croissance économique', 'Quiz de 20 questions sur la croissance économique', 'Terminale', 'Quels sont les sources et les défis de la croissance économique ?', 'open', NULL, 1, 0, 1, 1, 0, 'release', 0, 1, 1, 1, 0, 'lock', UNIX_TIMESTAMP(), UNIX_TIMESTAMP());
+INSERT INTO quizzes (title, description, level, chapter, status, access_code, max_attempts, time_limit, shuffle_questions, shuffle_choices, pool_size, feedback_mode, results_released, show_leaderboard, speed_bonus, require_fullscreen, max_exits, exit_action, created_at, updated_at) VALUES ('La croissance économique', 'Quiz de 20 questions sur la croissance économique', 'Terminale', 'Quels sont les sources et les défis de la croissance économique ?', 'draft', NULL, 1, 0, 1, 1, 0, 'release', 0, 1, 1, 1, 0, 'lock', UNIX_TIMESTAMP(), UNIX_TIMESTAMP());
 SET @quiz_id = LAST_INSERT_ID();
 INSERT INTO questions (quiz_id, position, type, prompt, data, points, time_limit, partial, explanation, created_at, updated_at) VALUES (@quiz_id, 0, 'single', 'Quelle est la différence fondamentale entre « croissance » et « expansion » ?', '{"choices":[{"id":"a","text":"La croissance est de court terme, l''expansion de long terme","correct":false},{"id":"b","text":"La croissance est une augmentation soutenue de la production sur le long terme (+1 an), l''expansion est une hausse de courte durée","correct":true},{"id":"c","text":"Ce sont deux synonymes désignant exactement le même phénomène","correct":false}]}', 1.00, 40, 0, 'La croissance se mesure sur le long terme (au moins 1 an), alors que l''expansion désigne une phase de hausse à court terme de l''activité.', UNIX_TIMESTAMP(), UNIX_TIMESTAMP());
 INSERT INTO questions (quiz_id, position, type, prompt, data, points, time_limit, partial, explanation, created_at, updated_at) VALUES (@quiz_id, 1, 'single', 'Comment calcule-t-on la valeur ajoutée (VA) d''une entreprise ?', '{"choices":[{"id":"a","text":"Chiffre d''affaires + Consommation intermédiaire","correct":false},{"id":"b","text":"Chiffre d''affaires – Consommation intermédiaire","correct":true},{"id":"c","text":"PIB / nombre d''habitants","correct":false}]}', 1.00, 40, 0, 'VA = Chiffre d''affaires – Consommation intermédiaire. Le PIB est la somme de toutes les valeurs ajoutées de l''économie.', UNIX_TIMESTAMP(), UNIX_TIMESTAMP());

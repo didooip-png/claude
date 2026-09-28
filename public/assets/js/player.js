@@ -683,6 +683,9 @@
     }
     function focusPoll() {
       if (!active()) return;
+      // Some embedded viewers never report focus: only rely on polling once focus has been observed.
+      if (document.hasFocus()) S.focusSeen = true;
+      if (!S.focusSeen) return;
       const ok = document.visibilityState === 'visible' && document.hasFocus();
       if (ok) { lastFocusOk = Date.now(); return; }
       if (!S.away && Date.now() - lastFocusOk > BLUR_GRACE_MS + 400) {

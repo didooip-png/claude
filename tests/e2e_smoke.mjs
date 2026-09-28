@@ -55,6 +55,13 @@ await teacher.waitForSelector('[data-validate-all]');
 await teacher.click('[data-validate-all]');
 await teacher.waitForSelector('text=Aucun compte en attente');
 log('prof : compte validé');
+await teacher.goto(BASE + '/#/prof/quiz');
+await teacher.reload();
+await teacher.locator('.qcard', { hasText: 'La croissance économique' }).locator('[data-edit]').click();
+await teacher.click('[data-status="open"]');
+await teacher.click('.modal-foot .btn-primary');
+await teacher.waitForSelector('[data-status="closed"]');
+log('prof : quiz ouvert aux élèves');
 
 // ---- Student starts the quiz ----
 await student.click('[data-reload]');
