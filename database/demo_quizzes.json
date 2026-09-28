@@ -1,0 +1,1068 @@
+{
+    "classes": [
+        "2nde 3",
+        "1ère SES 1",
+        "Tle SES 2"
+    ],
+    "quizzes": [
+        {
+            "title": "La croissance économique",
+            "description": "Quiz de 20 questions sur la croissance économique",
+            "level": "Terminale",
+            "chapter": "Quels sont les sources et les défis de la croissance économique ?",
+            "status": "open",
+            "access_code": null,
+            "feedback_mode": "release",
+            "show_leaderboard": 1,
+            "max_exits": 0,
+            "exit_action": "lock",
+            "questions": [
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Quelle est la différence fondamentale entre « croissance » et « expansion » ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "La croissance est de court terme, l'expansion de long terme",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "La croissance est une augmentation soutenue de la production sur le long terme (+1 an), l'expansion est une hausse de courte durée",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Ce sont deux synonymes désignant exactement le même phénomène",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "La croissance se mesure sur le long terme (au moins 1 an), alors que l'expansion désigne une phase de hausse à court terme de l'activité."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Comment calcule-t-on la valeur ajoutée (VA) d'une entreprise ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Chiffre d'affaires + Consommation intermédiaire",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Chiffre d'affaires – Consommation intermédiaire",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "PIB / nombre d'habitants",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "VA = Chiffre d'affaires – Consommation intermédiaire. Le PIB est la somme de toutes les valeurs ajoutées de l'économie."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Pourquoi utilise-t-on le PIB réel (et non le PIB nominal) pour calculer le taux de croissance ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Parce que le PIB réel est plus simple à calculer",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Pour supprimer l'effet de l'inflation et mesurer la vraie évolution de la production",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Parce que le PIB nominal n'existe pas vraiment",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Le PIB nominal inclut la hausse des prix (inflation). Le PIB réel corrige cet effet pour ne mesurer que l'évolution réelle des quantités produites."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Un pays double sa quantité de travail et de capital, et son PIB double exactement dans les mêmes proportions. Quel type de croissance cela illustre-t-il ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Croissance intensive",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Croissance extensive",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Une récession",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "C'est la définition de la croissance extensive : le PIB augmente au même rythme que les facteurs de production (rendements d'échelle constants)."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Selon la loi des rendements marginaux décroissants, si on augmente un seul facteur de production (en gardant l'autre fixe) :",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "La production augmente indéfiniment, dans les mêmes proportions",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "La production augmente, mais de moins en moins vite",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "La production diminue immédiatement",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Chaque unité supplémentaire du facteur apporte un supplément de production de plus en plus faible (ex : l'exemple de la pizza dans le cours)."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Pourquoi la croissance extensive n'est-elle pas soutenable indéfiniment ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Parce que les rendements marginaux des facteurs sont décroissants : accumuler indéfiniment travail et capital devient de moins en moins efficace",
+                                "correct": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "Parce qu'il n'y a jamais assez de main-d'œuvre disponible",
+                                "correct": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "Parce que la loi l'interdit au bout d'un moment",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "À cause des rendements décroissants, la seule accumulation de F(T) et F(K) finit par ne plus suffire à expliquer/soutenir la croissance."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Qu'est-ce que la Productivité Globale des Facteurs (PGF) ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "La quantité totale de travail et de capital utilisée dans l'économie",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Le résidu de croissance qui n'est pas expliqué par l'augmentation des quantités de facteurs de production",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Le taux de chômage global d'un pays",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "F(T) + F(K) + ? = Croissance. Ce « ? », résidu inexpliqué par les quantités de facteurs, est la PGF (les gains de productivité)."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Un pays voit son PIB augmenter fortement alors que ses quantités de travail et de capital sont restées quasiment identiques. Quel type de croissance illustre le mieux cette situation ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Croissance extensive",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Croissance intensive (grâce à la PGF)",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Aucune croissance n'est possible dans ce cas",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Quand la croissance provient surtout de la hausse de la PGF, à quantité de facteurs quasi constante, on parle de croissance intensive."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Parmi les propositions suivantes, laquelle n'est PAS une source de gains de PGF ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "L'amélioration de l'organisation des tâches",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "L'augmentation du nombre d'heures travaillées",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Le progrès technique contenu dans les machines",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Travailler plus d'heures, c'est augmenter la quantité de facteur travail (F(T)), pas la productivité : ce n'est donc pas un gain de PGF."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Grâce aux gains de PGF, une entreprise réduit ses coûts et augmente les salaires de ses employés. Quel est l'effet indirect probable sur la demande ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "La hausse du pouvoir d'achat des employés stimule leur consommation, ce qui incite les entreprises à produire davantage",
+                                "correct": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "Les employés vont automatiquement épargner tout leur salaire sans jamais consommer",
+                                "correct": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "Cela n'a aucun effet sur le reste de l'économie",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Salaires ↗️ → pouvoir d'achat ↗️ → consommation ↗️ → incite les entreprises à produire davantage pour répondre à la demande."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Pourquoi dit-on que le progrès technique (PT) est devenu « endogène » depuis les années 1980 ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Parce qu'il vient de l'extérieur du système économique, comme un choc imprévisible",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Parce qu'il trouve son origine à l'intérieur même du système économique, expliqué par l'innovation et la R&D",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Parce qu'il n'a aucune cause identifiable",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Endogène = expliqué de l'intérieur du modèle économique (par l'innovation, la R&D...), contrairement à « exogène » (avant les années 80)."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Pourquoi une entreprise a-t-elle intérêt à innover la première ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Parce que la loi l'oblige à innover régulièrement",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Parce qu'elle se retrouve temporairement en situation de monopole et peut ainsi augmenter ses profits",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Parce que l'innovation ne coûte jamais rien à mettre en place",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "En innovant, l'entreprise devient (temporairement) seule offreuse sur le marché : monopole temporaire, marge et CA plus élevés, jusqu'à ce que les autres la copient."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Que désigne le concept de « destruction créatrice » de Schumpeter ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Le fait que l'innovation ne détruit jamais aucune activité existante",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Le fait que les nouvelles innovations rendent les anciennes activités moins rentables, voire les font disparaître, tout en créant de nouvelles opportunités",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "La destruction des ressources naturelles causée par la croissance",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Exemple du cours : le streaming a rendu les CD obsolètes. L'innovation détruit certaines activités tout en en créant de nouvelles."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Un brevet incite une entreprise à investir dans l'innovation principalement parce qu'il :",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Oblige toutes les autres entreprises à investir aussi",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Protège contre la copie, garantissant que l'entreprise profitera des résultats de ses efforts",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Réduit automatiquement les impôts de l'entreprise",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Le droit de propriété (ex : le brevet) protège contre la copie, ce qui incite à investir puisqu'on est sûr de pouvoir en tirer les bénéfices."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Quelle est la différence entre les institutions « de réglementation » et les institutions « de stabilisation » ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Les premières protègent la concurrence et luttent contre les abus de position dominante ; les secondes réduisent l'instabilité économique (ex : lutte contre l'inflation)",
+                                "correct": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "Les premières s'occupent uniquement d'éducation, les secondes uniquement de santé",
+                                "correct": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "Elles désignent exactement la même chose",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Réglementation → concurrence, ententes, positions dominantes. Stabilisation → instabilité économique, inflation, épargne (ex : banque centrale)."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Dans un pays aux institutions « extractives », que se passe-t-il généralement ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Le pouvoir économique et politique est largement partagé, ce qui stimule l'investissement",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Une élite s'approprie une grande partie des richesses, ce qui décourage l'épargne, l'investissement et l'innovation",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Les droits de propriété y sont particulièrement bien protégés pour tous",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Institutions extractives = une élite capte les richesses → peu d'incitation à épargner/investir/innover → cela freine la croissance."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Pourquoi les droits de propriété favorisent-ils la croissance économique ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Parce qu'ils empêchent totalement toute concurrence entre entreprises",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Parce qu'ils garantissent à une personne ou une entreprise de pouvoir tirer les revenus de ses efforts, ce qui incite à investir et innover",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Parce qu'ils sont entièrement gratuits pour l'État",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Sachant qu'elles pourront profiter des résultats de leurs efforts, les entreprises sont incitées à investir, innover, et donc à faire croître l'économie."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Le progrès technique peut créer une « polarisation des emplois ». Que signifie ce phénomène ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Tous les emplois deviennent identiques et également qualifiés",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Le PT favorise à la fois les emplois très qualifiés et les emplois peu qualifiés non-routiniers, au détriment des emplois routiniers et intermédiaires",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Le progrès technique ne détruit jamais aucun emploi",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Ex : les robots remplacent des tâches industrielles routinières, mais créent des emplois très qualifiés ; les emplois peu qualifiés non routiniers subsistent."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "L'« effet superstar » permis par les technologies numériques explique pourquoi :",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Tous les travailleurs finissent par gagner le même salaire",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Quelques individus très talentueux (sportifs, artistes...) peuvent toucher un marché mondial à très faible coût, captant une part disproportionnée des revenus",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Les entreprises n'ont plus du tout besoin d'innover",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Les technologies numériques permettent de diffuser une œuvre/un service à très faible coût à un très grand nombre de personnes dans le monde entier."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 40,
+                    "points": 1,
+                    "prompt": "Concernant les limites écologiques de la croissance, quelle affirmation est correcte ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Les ressources renouvelables ne peuvent jamais être menacées, contrairement aux ressources non renouvelables",
+                                "correct": false
+                            },
+                            {
+                                "id": "b",
+                                "text": "Les ressources non renouvelables (pétrole, gaz, minerais) sont en quantité limitée, et même les ressources renouvelables peuvent être surexploitées (ex : la surpêche)",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "La croissance économique n'a aucun impact sur l'environnement",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Non renouvelables = quantité limitée (pétrole, gaz...). Renouvelables (poissons, forêts, eau) peuvent aussi s'épuiser si elles sont surexploitées, comme la surpêche."
+                }
+            ]
+        },
+        {
+            "title": "Exemple – Tous les types de questions",
+            "description": "Quiz d’exemple (brouillon) montrant les 6 types de questions : choix unique, choix multiples, vrai/faux, réponse courte, numérique, remise en ordre.",
+            "level": "Terminale",
+            "chapter": "Quels sont les sources et les défis de la croissance économique ?",
+            "status": "draft",
+            "access_code": null,
+            "feedback_mode": "immediate",
+            "show_leaderboard": 1,
+            "max_exits": 1,
+            "exit_action": "lock",
+            "questions": [
+                {
+                    "type": "single",
+                    "time_limit": 20,
+                    "points": 1,
+                    "prompt": "Le PIB (produit intérieur brut) mesure…",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "la richesse produite sur le territoire national pendant une période donnée",
+                                "correct": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "le patrimoine accumulé par les habitants d’un pays",
+                                "correct": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "les revenus perçus par les seuls résidents français",
+                                "correct": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "la différence entre les exportations et les importations",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Le PIB est la somme des valeurs ajoutées produites par les unités résidentes sur le territoire pendant une période donnée (en général un an)."
+                },
+                {
+                    "type": "numeric",
+                    "time_limit": 45,
+                    "points": 1,
+                    "prompt": "Le PIB d’un pays passe de 2 000 à 2 100 milliards d’euros en un an.\nQuel est le taux de croissance du PIB (en %) ?",
+                    "data": {
+                        "value": 5,
+                        "tolerance": 0.05,
+                        "unit": "%"
+                    },
+                    "explanation": "(2 100 − 2 000) / 2 000 × 100 = 5 %."
+                },
+                {
+                    "type": "multiple",
+                    "time_limit": 30,
+                    "points": 2,
+                    "partial": 1,
+                    "prompt": "Selon les théories de la croissance endogène, quelles sont des sources de croissance auto-entretenue ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "L’accumulation de capital humain",
+                                "correct": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "La recherche-développement",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Les infrastructures publiques",
+                                "correct": true
+                            },
+                            {
+                                "id": "d",
+                                "text": "La baisse de la population active",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Romer, Lucas et Barro montrent que le capital humain, les connaissances (R&D) et le capital public produisent des externalités positives qui entretiennent la croissance."
+                },
+                {
+                    "type": "truefalse",
+                    "time_limit": 20,
+                    "points": 1,
+                    "prompt": "La productivité globale des facteurs (PGF) mesure la part de la croissance qui n’est expliquée ni par la hausse du travail ni par celle du capital.",
+                    "data": {
+                        "answer": true
+                    },
+                    "explanation": "C’est le « résidu » de Solow, en grande partie attribué au progrès technique."
+                },
+                {
+                    "type": "short",
+                    "time_limit": 30,
+                    "points": 1,
+                    "prompt": "Quel économiste a popularisé la notion de « destruction créatrice » ?",
+                    "data": {
+                        "answers": [
+                            "Schumpeter",
+                            "Joseph Schumpeter",
+                            "Joseph Alois Schumpeter"
+                        ],
+                        "tolerance": true
+                    },
+                    "explanation": "Joseph Schumpeter, Capitalisme, socialisme et démocratie (1942)."
+                },
+                {
+                    "type": "ordering",
+                    "time_limit": 40,
+                    "points": 1,
+                    "partial": 1,
+                    "prompt": "Classe ces économies de la plus grande à la plus petite selon leur PIB en 2023 (en dollars courants).",
+                    "data": {
+                        "items": [
+                            {
+                                "id": "a",
+                                "text": "États-Unis"
+                            },
+                            {
+                                "id": "b",
+                                "text": "Chine"
+                            },
+                            {
+                                "id": "c",
+                                "text": "Allemagne"
+                            },
+                            {
+                                "id": "d",
+                                "text": "France"
+                            }
+                        ]
+                    },
+                    "explanation": "Selon le FMI : États-Unis (≈ 27 400 Md$), Chine (≈ 17 800 Md$), Allemagne (≈ 4 500 Md$), France (≈ 3 000 Md$)."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 25,
+                    "points": 1,
+                    "prompt": "Quelle conception de la soutenabilité considère que le capital naturel peut être compensé par du capital physique ou humain ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "La soutenabilité faible",
+                                "correct": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "La soutenabilité forte",
+                                "correct": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "La décroissance",
+                                "correct": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "L’empreinte écologique",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "La soutenabilité faible postule que les capitaux sont substituables ; la soutenabilité forte considère que certains éléments du capital naturel sont irremplaçables."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 20,
+                    "points": 1,
+                    "prompt": "Quel organisme publie les chiffres officiels de la croissance française ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "L’Insee",
+                                "correct": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "La Banque centrale européenne",
+                                "correct": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "Le FMI",
+                                "correct": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "L’OCDE",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "L’Insee (Institut national de la statistique et des études économiques) publie les comptes nationaux trimestriels."
+                }
+            ]
+        },
+        {
+            "title": "Le marché et la formation des prix",
+            "description": "Offre, demande, équilibre et ajustement par les prix.",
+            "level": "Seconde",
+            "chapter": "Comment un marché concurrentiel fonctionne-t-il ?",
+            "status": "draft",
+            "access_code": "482913",
+            "feedback_mode": "release",
+            "show_leaderboard": 1,
+            "max_exits": 0,
+            "exit_action": "lock",
+            "questions": [
+                {
+                    "type": "single",
+                    "time_limit": 25,
+                    "points": 1,
+                    "prompt": "Sur un marché concurrentiel, si la demande augmente (toutes choses égales par ailleurs), le prix d’équilibre…",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "augmente",
+                                "correct": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "diminue",
+                                "correct": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "ne change pas",
+                                "correct": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "devient nul",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "La courbe de demande se déplace vers la droite : le nouveau point d’équilibre correspond à un prix et une quantité plus élevés."
+                },
+                {
+                    "type": "truefalse",
+                    "time_limit": 20,
+                    "points": 1,
+                    "prompt": "La courbe d’offre est généralement croissante : plus le prix est élevé, plus les producteurs souhaitent vendre.",
+                    "data": {
+                        "answer": true
+                    },
+                    "explanation": "Un prix plus élevé rend la production plus rentable, les offreurs augmentent les quantités proposées."
+                },
+                {
+                    "type": "numeric",
+                    "time_limit": 45,
+                    "points": 1,
+                    "prompt": "Le prix d’un bien passe de 50 € à 40 €.\nQuel est le taux de variation du prix (en %) ?",
+                    "data": {
+                        "value": -20,
+                        "tolerance": 0.05,
+                        "unit": "%"
+                    },
+                    "explanation": "(40 − 50) / 50 × 100 = −20 %."
+                },
+                {
+                    "type": "short",
+                    "time_limit": 30,
+                    "points": 1,
+                    "prompt": "Comment appelle-t-on la situation dans laquelle la quantité offerte est égale à la quantité demandée ?",
+                    "data": {
+                        "answers": [
+                            "équilibre",
+                            "équilibre du marché",
+                            "équilibre de marché",
+                            "équilibre de l’offre et de la demande"
+                        ],
+                        "tolerance": true
+                    },
+                    "explanation": "C’est l’équilibre du marché : il détermine le prix et la quantité d’équilibre."
+                },
+                {
+                    "type": "multiple",
+                    "time_limit": 35,
+                    "points": 2,
+                    "partial": 1,
+                    "prompt": "Quels éléments provoquent un déplacement de la courbe de demande d’un bien ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "Une hausse du revenu des consommateurs",
+                                "correct": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "Une variation du prix d’un bien substituable",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Un changement dans les goûts des consommateurs",
+                                "correct": true
+                            },
+                            {
+                                "id": "d",
+                                "text": "Une variation du prix du bien lui-même",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Une variation du prix du bien lui-même provoque un déplacement le long de la courbe, et non un déplacement de la courbe."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 25,
+                    "points": 1,
+                    "prompt": "Un prix plancher fixé au-dessus du prix d’équilibre provoque…",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "un excédent d’offre",
+                                "correct": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "une pénurie",
+                                "correct": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "un retour immédiat à l’équilibre",
+                                "correct": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "une hausse de la quantité demandée",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Au-dessus du prix d’équilibre, la quantité offerte dépasse la quantité demandée : il y a un excédent d’offre (ex. : SMIC et chômage selon l’analyse néoclassique)."
+                },
+                {
+                    "type": "ordering",
+                    "time_limit": 45,
+                    "points": 1,
+                    "partial": 1,
+                    "prompt": "Remets dans l’ordre le mécanisme d’ajustement d’un marché en situation de pénurie.",
+                    "data": {
+                        "items": [
+                            {
+                                "id": "a",
+                                "text": "La quantité demandée dépasse la quantité offerte"
+                            },
+                            {
+                                "id": "b",
+                                "text": "Le prix augmente"
+                            },
+                            {
+                                "id": "c",
+                                "text": "La quantité demandée baisse et la quantité offerte augmente"
+                            },
+                            {
+                                "id": "d",
+                                "text": "Le marché revient à l’équilibre"
+                            }
+                        ]
+                    },
+                    "explanation": "La hausse du prix fait converger l’offre et la demande jusqu’au prix d’équilibre."
+                }
+            ]
+        },
+        {
+            "title": "La socialisation",
+            "description": "Instances et processus de socialisation, primaire et secondaire.",
+            "level": "Première",
+            "chapter": "Comment la socialisation contribue-t-elle à expliquer les différences de comportement des individus ?",
+            "status": "draft",
+            "access_code": null,
+            "feedback_mode": "end",
+            "show_leaderboard": 0,
+            "max_exits": 0,
+            "exit_action": "lock",
+            "questions": [
+                {
+                    "type": "single",
+                    "time_limit": 20,
+                    "points": 1,
+                    "prompt": "La socialisation primaire se déroule principalement…",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "pendant l’enfance",
+                                "correct": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "à l’âge adulte",
+                                "correct": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "au moment de la retraite",
+                                "correct": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "uniquement sur le lieu de travail",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "La socialisation primaire correspond à l’enfance ; elle est principalement assurée par la famille et l’école."
+                },
+                {
+                    "type": "multiple",
+                    "time_limit": 30,
+                    "points": 2,
+                    "partial": 1,
+                    "prompt": "Parmi les éléments suivants, lesquels sont des instances de socialisation ?",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "La famille",
+                                "correct": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "L’école",
+                                "correct": true
+                            },
+                            {
+                                "id": "c",
+                                "text": "Le groupe de pairs",
+                                "correct": true
+                            },
+                            {
+                                "id": "d",
+                                "text": "Les médias",
+                                "correct": true
+                            },
+                            {
+                                "id": "e",
+                                "text": "Le code génétique",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "La socialisation est un processus social : le code génétique n’est pas une instance de socialisation."
+                },
+                {
+                    "type": "truefalse",
+                    "time_limit": 20,
+                    "points": 1,
+                    "prompt": "Pour Émile Durkheim, l’éducation est une « socialisation méthodique de la jeune génération ».",
+                    "data": {
+                        "answer": true
+                    },
+                    "explanation": "Durkheim, Éducation et sociologie (1922)."
+                },
+                {
+                    "type": "short",
+                    "time_limit": 30,
+                    "points": 1,
+                    "prompt": "Quel sociologue a développé la notion d’habitus ?",
+                    "data": {
+                        "answers": [
+                            "Bourdieu",
+                            "Pierre Bourdieu"
+                        ],
+                        "tolerance": true
+                    },
+                    "explanation": "Pierre Bourdieu : l’habitus désigne un ensemble de dispositions durables acquises par la socialisation."
+                },
+                {
+                    "type": "single",
+                    "time_limit": 30,
+                    "points": 1,
+                    "prompt": "La socialisation anticipatrice (R. K. Merton) désigne…",
+                    "data": {
+                        "choices": [
+                            {
+                                "id": "a",
+                                "text": "l’intériorisation des normes d’un groupe auquel on souhaite appartenir",
+                                "correct": true
+                            },
+                            {
+                                "id": "b",
+                                "text": "la transmission des valeurs par les parents",
+                                "correct": false
+                            },
+                            {
+                                "id": "c",
+                                "text": "l’apprentissage des règles à l’école primaire",
+                                "correct": false
+                            },
+                            {
+                                "id": "d",
+                                "text": "la reproduction des comportements des grands-parents",
+                                "correct": false
+                            }
+                        ]
+                    },
+                    "explanation": "Merton montre que des individus adoptent par avance les valeurs du groupe de référence qu’ils veulent rejoindre."
+                },
+                {
+                    "type": "truefalse",
+                    "time_limit": 20,
+                    "points": 1,
+                    "prompt": "La socialisation s’arrête à la fin de l’adolescence.",
+                    "data": {
+                        "answer": false
+                    },
+                    "explanation": "La socialisation est un processus continu : la socialisation secondaire se poursuit tout au long de la vie."
+                }
+            ]
+        }
+    ]
+}

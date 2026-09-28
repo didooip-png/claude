@@ -1,0 +1,6 @@
+public/config.local.php
+public/uploads/*
+!public/uploads/.htaccess
+!public/uploads/index.html
+node_modules/
+.DS_Store
