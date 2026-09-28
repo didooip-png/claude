@@ -392,60 +392,89 @@ function recompute_quiz_attempts(int $quizId): void
 }
 
 /**
- * Parses Moodle "Aiken" text (plus multi-answer extension "ANSWER: A, C").
- * Returns [questions[], errors[]].
+ * Parses pasted questions. Accepts Moodle "Aiken" (ANSWER: B, blocks separated by blank lines) and
+ * the common numbered format: "1. Question", "• A. choice", "✓ B — explanation".
+ * Several letters ("ANSWER: A, C") make a multiple-answer question. Returns [questions[], errors[]].
  */
 function parse_aiken(string $text): array
 {
-    $text = str_replace(["\r\n", "\r"], "\n", $text);
-    $blocks = preg_split('/\n\s*\n+/', trim($text));
+    $lines = explode("\n", str_replace(["\r\n", "\r"], "\n", $text));
     $questions = [];
     $errors = [];
-    foreach ($blocks as $n => $block) {
-        $lines = array_values(array_filter(array_map('trim', explode("\n", $block)), fn($l) => $l !== ''));
-        if (!$lines) {
-            continue;
+    $cur = null;
+
+    $finish = function () use (&$cur, &$questions, &$errors) {
+        if ($cur === null) {
+            return;
         }
-        $prompt = [];
-        $choices = [];
-        $answer = null;
-        $explanation = null;
-        foreach ($lines as $line) {
-            if (preg_match('/^(ANSWER|R[ÉE]PONSE|REPONSES|R[ÉE]PONSES)\s*:\s*(.+)$/iu', $line, $m)) {
-                $answer = strtoupper($m[2]);
-            } elseif (preg_match('/^(EXPLICATION|FEEDBACK)\s*:\s*(.+)$/iu', $line, $m)) {
-                $explanation = $m[2];
-            } elseif (preg_match('/^([A-Ha-h])\s*[.)\-:]\s+(.+)$/u', $line, $m) && $answer === null && ($choices || $prompt)) {
-                $choices[strtoupper($m[1])] = $m[2];
-            } elseif (!$choices) {
-                $prompt[] = $line;
+        $label = 'Question « ' . mb_substr(implode(' ', $cur['prompt']), 0, 50) . ' »';
+        if (!$cur['choices'] && $cur['answer'] === null) {
+            $cur = null; // title or free text: ignored
+            return;
+        }
+        if (count($cur['choices']) < 2) {
+            $errors[] = "$label : il faut au moins 2 propositions (A. B. …).";
+        } elseif (!$cur['answer']) {
+            $errors[] = "$label : bonne réponse manquante (ligne « ANSWER: B » ou « ✓ B »).";
+        } else {
+            $missing = array_diff($cur['answer'], array_keys($cur['choices']));
+            if ($missing) {
+                $errors[] = "$label : la réponse « " . implode(', ', $missing) . ' » ne correspond à aucune proposition.';
             } else {
-                $errors[] = 'Bloc ' . ($n + 1) . ' : ligne non reconnue « ' . mb_substr($line, 0, 60) . ' ».';
-                continue 2;
+                $list = [];
+                foreach ($cur['choices'] as $letter => $t) {
+                    $list[] = ['id' => strtolower($letter), 'text' => $t, 'correct' => in_array($letter, $cur['answer'], true)];
+                }
+                $questions[] = [
+                    'type' => count($cur['answer']) > 1 ? 'multiple' : 'single',
+                    'prompt' => trim(implode("\n", $cur['prompt'])),
+                    'data' => ['choices' => $list],
+                    'explanation' => $cur['explanation'],
+                ];
             }
         }
-        $letters = $answer !== null ? array_values(array_filter(array_map('trim', preg_split('/[\s,;]+/', $answer)))) : [];
-        if (!$prompt || count($choices) < 2 || !$letters) {
-            $errors[] = 'Bloc ' . ($n + 1) . ' : il faut un énoncé, au moins 2 propositions (A. B. …) et une ligne ANSWER: …';
+        $cur = null;
+    };
+    $start = function (string $prompt) use (&$cur, $finish) {
+        $finish();
+        $cur = ['prompt' => [$prompt], 'choices' => [], 'answer' => null, 'explanation' => null, 'last' => null];
+    };
+
+    foreach ($lines as $rawLine) {
+        $line = trim(preg_replace('/^[\s\x{2022}\x{25E6}\x{25AA}\x{25CF}\x{2023}\x{2043}\x{2219}*\-–]+(?=\S)/u', '', $rawLine));
+        if ($line === '') {
             continue;
         }
-        foreach ($letters as $l) {
-            if (!isset($choices[$l])) {
-                $errors[] = 'Bloc ' . ($n + 1) . " : la réponse « $l » ne correspond à aucune proposition.";
-                continue 2;
+        if (preg_match('/^(?:[\x{2713}\x{2714}\x{2611}\x{2705}]|ANSWER|R[ÉEée]PONSES?|BONNES?\s+R[ÉEée]PONSES?)\s*[:：]?\s*([A-Ha-h](?:\s*(?:,|;|&|\bet\b|\/)\s*[A-Ha-h])*)(?![\p{L}\d])\s*(?:[—–\-:.)]\s*(.*))?$/u', $line, $m) && $cur !== null) {
+            $cur['answer'] = array_values(array_unique(array_map('strtoupper', preg_split('/\s*(?:,|;|&|\bet\b|\/)\s*/u', trim($m[1])))));
+            if (isset($m[2]) && trim($m[2]) !== '') {
+                $cur['explanation'] = trim($m[2]);
             }
+            continue;
         }
-        $list = [];
-        foreach ($choices as $letter => $t) {
-            $list[] = ['id' => strtolower($letter), 'text' => $t, 'correct' => in_array($letter, $letters, true)];
+        if (preg_match('/^(?:EXPLICATION|FEEDBACK|CORRECTION)\s*[:：]\s*(.+)$/iu', $line, $m) && $cur !== null) {
+            $cur['explanation'] = trim($m[1]);
+            continue;
         }
-        $questions[] = [
-            'type' => count($letters) > 1 ? 'multiple' : 'single',
-            'prompt' => implode("\n", $prompt),
-            'data' => ['choices' => $list],
-            'explanation' => $explanation,
-        ];
+        if (preg_match('/^([A-Ha-h])\s*[.)\]:]\s*(.+)$/u', $line, $m) && $cur !== null && $cur['answer'] === null) {
+            $letter = strtoupper($m[1]);
+            $cur['choices'][$letter] = trim($m[2]);
+            $cur['last'] = $letter;
+            continue;
+        }
+        if (preg_match('/^(?:Q(?:uestion)?\s*)?\d{1,3}\s*[.)\-:]\s*(.+)$/iu', $line, $m)) {
+            $start(trim($m[1]));
+            continue;
+        }
+        if ($cur === null || $cur['answer'] !== null) {
+            $start($line);
+        } elseif (!$cur['choices']) {
+            $cur['prompt'][] = $line;
+        } elseif ($cur['last'] !== null) {
+            $cur['choices'][$cur['last']] .= ' ' . $line;
+        }
     }
+    $finish();
     return [$questions, $errors];
 }
 
